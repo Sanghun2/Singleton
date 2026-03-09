@@ -1,0 +1,15 @@
+﻿{
+  "name": "com.billiotgames.singleton",
+  "version": "1.0.0",
+  "displayName": "Singleton",
+  "description": "Singleton으로 선언하는 클래스",
+  "unity": "6000.2",
+  "author": {
+    "name": "Billiot Games",
+    "url": "https://github.com/Sanghun2/Scene-Controller"
+  },
+  "keywords": [
+    "Manager",
+    "Controller"
+  ]
+}
