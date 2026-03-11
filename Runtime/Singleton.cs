@@ -25,7 +25,7 @@ namespace BilliotGames
             else {
                 var @this = GetComponent<T>();
                 if (_instance.Equals(@this) == false) {
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
             }
         }
