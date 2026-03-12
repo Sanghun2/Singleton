@@ -24,10 +24,12 @@ namespace BilliotGames
         protected virtual void Awake() {
             if (dontDestroy) {
                 DontDestroyOnLoad(gameObject);
+                Debug.Log("dont destroy");
             }
 
             if (_instance == null) {
                 _instance = GetComponent<T>();
+                Debug.Log("instance assigned");
             }
             else {
                 var @this = GetComponent<T>();
