@@ -16,15 +16,18 @@ namespace BilliotGames
             }
         }
 
+        public bool DontDestroy => dontDestroy;
+
         private static T _instance;
         [SerializeField] bool dontDestroy=true;
 
         protected virtual void Awake() {
+            if (dontDestroy) {
+                DontDestroyOnLoad(gameObject);
+            }
+
             if (_instance == null) {
                 _instance = GetComponent<T>();
-                if (dontDestroy) {
-                    DontDestroyOnLoad(gameObject);
-                }
             }
             else {
                 var @this = GetComponent<T>();
