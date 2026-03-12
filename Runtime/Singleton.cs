@@ -23,13 +23,14 @@ namespace BilliotGames
 
         protected virtual void Awake() {
             if (dontDestroy) {
+                if (transform.parent != null) {
+                    Debug.LogWarning($"<color=yellow>don't destroy를 위해서는 parent object가 없어야 합니다. dont destroy로 만들려면 분리해주세요</color>");
+                }
                 DontDestroyOnLoad(gameObject);
-                Debug.Log("dont destroy");
             }
 
             if (_instance == null) {
                 _instance = GetComponent<T>();
-                Debug.Log("instance assigned");
             }
             else {
                 var @this = GetComponent<T>();
